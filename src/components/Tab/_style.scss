@@ -1,0 +1,30 @@
+.tab {
+  display: block;
+  .tab-items {
+    display: flex;
+    .tab-item {
+      padding: 5px 10px;
+      border-bottom: 1px solid $gray-300;
+      border-radius: 5px 5px 0 0;
+      &_title {
+        cursor: pointer;
+      }
+      &.is-disabled {
+        color: $gray-500;
+        .tab-item_title {
+          cursor: no-drop;
+        }
+      }
+      &.is-active {
+        color: $primary;
+        &.tab-card {
+          border: 1px solid $gray-300;
+          border-bottom: none;
+        }
+        &.tab-line {
+          border-bottom: 2px solid $primary;
+        }
+      }
+    }
+  }
+}

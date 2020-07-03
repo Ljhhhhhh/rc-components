@@ -1,0 +1,39 @@
+.alert {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+  &-info {
+    background: $info;
+    color: $gray-900;
+  }
+
+  &-success {
+    background: $success;
+    color: $white;
+  }
+
+  &-warning {
+    background: $warning;
+    color: $white;
+  }
+
+  &-error {
+    background: $danger;
+    color: $white;
+  }
+}
+
+.alert-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 15px;
+}
+
+.alert-close_btn {
+  cursor: pointer;
+}
