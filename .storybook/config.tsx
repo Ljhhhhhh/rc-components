@@ -1,6 +1,8 @@
-import React, { Suspense } from "react";
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import React from "react";
+import { withInfo } from '@storybook/addon-info'
+import { addDecorator, addParameters } from '@storybook/react';
 import "../src/styles/index.scss"
+
 
 const wrapperStyle: React.CSSProperties = {
   padding: '20px 40px'
@@ -13,4 +15,6 @@ const storyWrapper = (stroyFn: any) => (
   </div>
 )
 
+addDecorator(withInfo)
+addParameters({info: {inline: true, header: false}})
 addDecorator(storyWrapper)

@@ -2,7 +2,7 @@ import React,{ useContext, useState, FunctionComponentElement } from 'react'
 import classNames from 'classnames'
 import { MenuContext } from './menu'
 import { MenuItemProps } from './menuItem'
-import Icon from '../Icon'
+import Icon from '../Icon/icon'
 import Transition from '../Transition/transition'
 export interface SubMenuProps {
   index?: string;
@@ -40,7 +40,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
     onMouseLeave: (e: React.MouseEvent) => { handleMouse(e, false)}
   } : {}
   const renderChildren = () => {
-    const subMenuClasses = classNames('submenu', {
+    const subMenuClasses = classNames('viking-submenu', {
       'menu-opened': menuOpen
     })
     const childrenComponent = React.Children.map(children, (child, i) => {
@@ -69,7 +69,7 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
     <li key={index} className={classes} {...hoverEvents}>
       <div className="submenu-title" {...clickEvents}>
         {title}
-        <Icon icon="ad" className="arrow-icon"/>
+        <Icon icon="angle-down" className="arrow-icon"/>
       </div>
       {renderChildren()}
     </li>
