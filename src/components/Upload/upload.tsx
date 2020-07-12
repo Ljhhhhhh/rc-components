@@ -18,7 +18,7 @@ export interface UploadProps {
   defaultFileList?: UploadFile[];
   beforeUpload? : (file: File) => boolean | Promise<File>;
   onProgress?: (percentage: number, file: File) => void;
-  onSuccess?: (data: any, file: File) => void;
+  onSuccess?: (data: any, file: File) => void; // File => UploadFile可以用useEffect，对应data从最新添加的数据中取到
   onError?: (err: any, file: File) => void;
   onChange?: (file: File) => void;
   onRemove?: (file: UploadFile) => void;
